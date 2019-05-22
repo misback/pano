@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:drawable="@drawable/ic_more_settings"
+                android:top="@dimen/dp_5"
+                android:bottom="@dimen/dp_5"
+                android:left="@dimen/dp_5"
+                android:right="@dimen/dp_5"/>
+        </layer-list>
+    </item>
+    <item android:drawable="@drawable/ic_more_settings" />
+</selector>

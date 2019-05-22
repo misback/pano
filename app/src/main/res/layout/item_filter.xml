@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+    <com.lwm.shapeimageview.RoundedImageView
+        android:id="@+id/riv_filter"
+        android:layout_width="@dimen/dp_67"
+        android:layout_height="@dimen/dp_67"
+        android:src="@drawable/ic_filter_original"
+        app:siRadius="@dimen/dp_5"
+        app:siSquare="true"/>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/dp_67"
+        android:layout_height="@dimen/dp_26"
+        android:textSize="@dimen/sp_10"
+        android:background="@drawable/bg_text_filter"
+        android:textColor="@color/C_FF_FF_FF"
+        android:gravity="center_vertical|center"
+        android:layout_gravity="center_vertical|center|bottom" />
+</FrameLayout>

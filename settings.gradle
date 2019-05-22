@@ -1,0 +1,2 @@
+include ':app',':libsharing', ':shapeImageView', ':crop',':injector'
+

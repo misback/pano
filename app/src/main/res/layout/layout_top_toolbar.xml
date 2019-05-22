@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:gravity="center_vertical"
+    android:background="@color/C_F5_F5_F5"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/C_00_00_00"
+        android:gravity="center|center_vertical"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableLeft="@drawable/ic_back"/>
+</LinearLayout>

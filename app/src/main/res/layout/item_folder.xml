@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:id="@+id/tv_folder"
+        android:layout_marginLeft="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_add_files"
+        android:text="@string/all_panorama_files"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:textSize="@dimen/sp_16"/>
+
+    <TextView
+        android:id="@+id/tv_files"
+        android:layout_marginRight="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:drawableRight="@drawable/ic_right_arrow"
+        android:text="@string/files"
+        android:textSize="@dimen/sp_16"/>
+</RelativeLayout>

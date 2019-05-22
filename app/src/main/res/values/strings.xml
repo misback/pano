@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<string name="app_name">UU360</string>-->
+    <string name="app_name">LP360</string>
+    <string name="facebook_app_name">UU360</string>
+    <string name="fb_login_protocol_scheme">fb1836246906694564</string>
+    <string name="sd_dir">unipano</string>
+    <string name="click_to_login">点击登录</string>
+    <string name="login_slogan">一秒登录云同步  和朋友一起玩</string>
+    <string name="app_version">APP版本</string>
+    <string name="firmware_version">固件版本</string>
+
+    <string name="faq">常见问题</string>
+    <string name="the_manual">使用手册</string>
+    <string name="serial_number">SN号</string>
+    <string name="multi_language">多语言</string>
+    <string name="about">关于</string>
+
+
+    <string name="call">呼叫</string>
+    <string name="work_time">工作时间：09:00-18:00</string>
+    <string name="discovery">发现</string>
+    <string name="other">其他</string>
+    <string name="hint">提示</string>
+    <string name="pleasse_connect_camera">未检测到相机</string>
+    <string name="exit_app">再按一次退出程序</string>
+    <string name="not_have_video">你还没有添加视频哦</string>
+    <string name="not_have_collection">你还没有添加收藏哦</string>
+    <string name="not_have_all">你还没有添加照片(视频)哦</string>
+    <string name="connect_camera">立即咔嚓一下</string>
+    <string name="sure_delete">确定删除?</string>
+    <string name="sure_delete_one">确定要删除这张图片吗？</string>
+    <!-- tips -->
+    <string name="tips_camera_not_connect">您的相机未连接</string>
+    <string name="tips_camera_not_connect1">请确保连接后使用</string>
+    <!--分享 -->
+    <string name="play_tips_not_install">您未安装%s</string>
+    <string name="share_title_default">UU360全景分享</string>
+    <string name="share_tips_input">请填写描述</string>
+    <string name="share_tips_cancel">确定取消分享?</string>
+
+    <string name="error_tips_network">请检查网络连接</string>
+    <string name="share_tips_error_share">分享失败</string>
+    <string name="share_tips_success_share">分享成功</string>
+    <string name="share_tips_file_limit">为确保体验,视频时长不能超过180秒</string>
+    <string name="share_tips_upload_failed">上传失败</string>
+    <string name="share_tips_upload_uncomplete">上传未完成</string>
+
+    <string name="share_platform_wechat">微信</string>
+    <string name="share_platform_wechat_circle">朋友圈</string>
+    <string name="share_platform_facebook">Facebook</string>
+    <string name="share_platform_twitter">Twitter</string>
+    <string name="share_platform_youtube">Youtube</string>
+    <string name="share_platform_sina_weibo">新浪微博</string>
+    <string name="share_platform_qq">QQ</string>
+    <string name="share_platform_qq_zone">QQ空间</string>
+
+    <string name="storage_not_enouhg">存储空间不足</string>
+    <string name="storage_not_enouhg_video">请先清理后再录影</string>
+    <string name="storage_not_enouhg_picture">请先清理后再拍摄</string>
+    <string name="storage_not_enouhg_filter">请先清理后重新编辑保存</string>
+
+    <string name="select_all">全选</string>
+    <string name="cancel_selection">取消</string>
+    <string name="select_number">选择(%1$d)</string>
+    <string name="delete_file_prompt">删除这(%1$d)个文件吗？</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_select_all">取消全选</string>
+    <string name="share">分享</string>
+    <string name="delete">删除</string>
+    <string name="select_item">请选择要删除的项</string>
+    <string name="already_select_item">已选择%1$s项</string>
+
+    <string name="language">语言切换</string>
+    <string name="chinese">中文</string>
+    <string name="english">英文</string>
+    <string name="watermark">底部默认Logo选择</string>
+
+    <string name="watermark_prompt">选择Logo</string>
+    <string name="take_photo">拍照生成的照片包含Logo</string>
+
+    <!-- other files-->
+    <string name="other_files">其他文件</string>
+    <string name="all_panorama_files">全部360°文件</string>
+    <string name="files">(%1$d)项</string>
+
+    <string name="screenshot">截屏</string>
+    <string name="filter">滤镜</string>
+    <string name="fish_eye">默认</string>
+    <string name="perspective">透视</string>
+    <string name="little_planet">小行星</string>
+    <string name="crystal_ball">水晶球</string>
+    <string name="finger_drag">手指拖动</string>
+    <string name="gyroscope">陀螺仪</string>
+    <string name="more_settings">更多设置</string>
+    <string name="vr_mode">眼镜模式</string>
+    <string name="complete">删除</string>
+
+    <string name="not_connected">尚未连接相机</string>
+    <string name="connection_error">连接不上?</string>
+    <string name="photograph">拍照</string>
+    <string name="record">录制</string>
+
+    <string name="home">首页</string>
+    <string name="album">相册</string>
+    <string name="settings">设置</string>
+
+
+    <string name="filter_name_original">原图</string>
+    <string name="filter_name_budapest">晨之美</string>
+    <string name="filter_name_chaplin">黑色幽默</string>
+    <string name="filter_name_autumn">秋意浓</string>
+    <string name="filter_name_oak">素颜</string>
+    <string name="filter_name_monroe">粉红佳人</string>
+    <string name="filter_name_dejavu">岁堤春晓</string>
+    <string name="filter_name_lavie">花田错</string>
+    <string name="filter_name_lucifer">竹林深处</string>
+    <string name="filter_name_memo">失落沙洲</string>
+    <string name="filter_name_confess">告白气球</string>
+    <string name="filter_name_sapporo">冬日恋歌</string>
+    <string name="filter_name_lp">说时依旧</string>
+    <string name="filter_name_blossom">麦田捕手</string>
+    <string name="filter_name_gray_relief">动漫</string>
+    <string name="filter_glass_a">眼镜-A</string>
+    <string name="filter_glass_b">眼镜-B</string>
+    <string name="filter_glass_c">眼镜-C</string>
+    <string name="filter_glass_d">眼镜-D</string>
+    <string name="filter_glass_e">眼镜-E</string>
+    <string name="filter_hat_a">帽子-A</string>
+    <string name="filter_hat_b">帽子-B</string>
+    <string name="filter_hat_c">帽子-C</string>
+    <string name="filter_hat_d">帽子-D</string>
+    <string name="filter_hat_e">帽子-E</string>
+    <string name="filter_hat_f">帽子-F</string>
+    <string name="filter_hat_g">帽子-G</string>
+    <string name="filter_hat_h">帽子-H</string>
+    <string name="filter_hat_i">帽子-I</string>
+    <string name="facebook_app_id">1836246906694564</string>
+    <string name="not_function">功能暂未开放</string>
+    <string name="start_connect">开始连接</string>
+    <string name="connect_camera_fail">连接相机失败</string>
+    <string name="start_photo">开始拍照</string>
+    <string name="not_connect_camera">没有连接相机</string>
+    <string name="taking_photo">正在拍照</string>
+    <string name="not_free">没有储存空间</string>
+    <string name="start_record">开始录制</string>
+    <string name="recording">正在录制</string>
+    <string name="connect_success">连接成功</string>
+    <string name="connect_fail">连接失败</string>
+    <string name="disconnect">断开连接</string>
+    <string name="disconnect_fail">断开连接失败</string>
+
+    <string name="user_defined">自定义</string>
+    <string name="none">无</string>
+    <string name="adjust">调整</string>
+    <string name="select_picture">请选择图片</string>
+    <string name="not_select_picture">没有选择一张图片</string>
+    <string name="adjust_image">调整图片</string>
+    <string name="use">使用</string>
+    <string name="exception">异常</string>
+    <string name="unbind">未绑定</string>
+    <string name="app_setting">APP设置</string>
+    <string name="facebook_account_bind">facebook</string>
+    <string name="splash_version">版本号:&#160;&#160;v%1$s</string>
+    <string name="select">选择</string>
+
+    <string name="account_bind">账号绑定</string>
+    <string name="shoot_setting">拍摄设置</string>
+    <string name="record_time_limit">录像15分钟后自动停止</string>
+    <string name="shutter_sound">快门声音</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="glasses_model">眼镜模式</string>
+    <string name="exit_app_toast">再按一次后退键退出程序</string>
+    <string name="description">描述</string>
+    <string name="share_to_wechat">分享到微信</string>
+    <string name="share_to_friends">分享到朋友圈</string>
+    <string name="share_to_qq">分享到qq</string>
+    <string name="share_to_qqzone">分享到qq空间</string>
+    <string name="confirm_cancel_share">确认退出分享?</string>
+    <string name="confrim_delete_file">从手机中删除这%1$d个文件吗？</string>
+    <string name="delete_success">删除成功</string>
+    <string name="delete_failure">删除失败</string>
+    <string name="zero_byte">0字节</string>
+    <string name="clear_success">清除成功</string>
+    <string name="no_new_version">没有新版本</string>
+    <string name="find_new_version">发布新版本v%1$s</string>
+    <string name="download_now">现在下载(%1$s)</string>
+    <string name="download_again">重新下载(%1$s)</string>
+    <string name="download_failure">下载失败</string>
+    <string name="download_complete">下载完成</string>
+    <string name="not_prompt">以后不在提示</string>
+    <string name="no_file_select">暂无文件可选择</string>
+    <string name="album_empty">相册空空如也,快去拍照吧!</string>
+    <string name="check_update_failure">检查更新失败</string>
+    <string name="share_default_text">生活那么美,我要360°体验</string>
+    <string name="share_failure">分享失败</string>
+    <string name="re_share">重新分享</string>
+    <string name="today">今天</string>
+</resources>

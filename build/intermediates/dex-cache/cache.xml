@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.github.dragon66\pixymeta-android\1.0-SNAPSHOT\7b52893f8f53d799d600bbdc61b201a055926bbc\pixymeta-android-1.0-SNAPSHOT.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7b52893f8f53d799d600bbdc61b201a055926bbc">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\10\pixymeta-android-1.0-SNAPSHOT_ab500eba7c9523dc11446e006669aa571a55afdd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\wechat-sdk-android-with-mta-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="11b103caa35b055f5c9de822fd3e4df14e7961f9">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\wechat-sdk-android-with-mta-1.0.2_60428ccfcb13291c2511ae5213c9eb259d7dd946\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\shapeImageView\build\intermediates\bundles\default\libs\kxml2-2.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d30b4a3fed539977cc38ffabc10647151d729b95">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\kxml2-2.3.0_0b8c723e069864018a0682cb9416e92ad801a759\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\umeng_social_shareview.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="361d05a2ec53db44c4dc6b94de24caf319b99626">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\umeng_social_shareview_2e3e2ec53e90b01176ff7ee33c8e39f12c2c139c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\SocialSDK_Sina_Full.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf4dab84f244292584eec9534c4eb296c77643e4">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_Sina_Full_169d6162fd2f44d6b8158e40e17b7a1b61975f11\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\open_sdk_r5781.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="85f474ddea56aff6373e48425b1bfe64d3fd2824">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\open_sdk_r5781_9ed9c30e2f6d8ad765fbb7ff70308df6ed899c45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\utdid4all-1.0.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d58701f32ca13f8d4de68492d24843d8a9290687">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\utdid4all-1.0.4_6e4dabc93382dfc77e74addf3e7ad8c4bf899ee9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\umeng_social_net.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1a365ea4c58c4fdcbffc886d5f813fcdef813430">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\umeng_social_net_a67bb3faa39c5590c9557dfe65afe163ccf6682d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\weiboSDKCore_3.1.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2bc78160e85f56f81c91271dfa44bd8c8293cb94">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\weiboSDKCore_3.1.4_8a5407c0196c3e87e29a4545512044e4e68f5ea0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\libddshare.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fe32ceff58d0840743572fc98161505d10e2b590">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\libddshare_33bee10fc5807731c0dae598b5d20bf6fd81c677\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\umeng_social_tool.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8b17b7c71ac912fb54ad4df2c5d1f3b36ec95837">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\umeng_social_tool_a75789637ef893eb71ed646d24715858c8778aa9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fff424549382441f1b920eeebf6ede419a46b3ba">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f2a01c545f1ea1fa2bf64ed7ed8266cd95cf7399\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\SocialSDK_WeiXin_Full.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c714a4646fbc1f4c19324f5018730f5759fbd188">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_WeiXin_Full_06b651064e1c35046dfa18142c6c39ce4b07d3cc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\umeng_shareboard_widget.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bbf940eb41c869970b3ddcf0117e9718f687af71">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\umeng_shareboard_widget_5274cf2d3f2d04ddd4ce6a90641f21eed6ab858c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\SocialSDK_QQ_Full.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5eb2403cdce0ed752c1f784b1788c7d1f5daa7a8">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_QQ_Full_bb92a68186bb5c0f03a4f9fd1d6a36b509d2a3b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\umeng_social_shareboard.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9cba5e1549296dcc953193d136712b891e7a0776">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\umeng_social_shareboard_79d506ca16840acecffb7f8bc87777cbc238a897\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\SocialSDK_facebook.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5bf7d937a12e9b0784cbd94c0a74f32deeece9bd">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\SocialSDK_facebook_3341b307c13ca6b5c0d38fd91c120d1079052483\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_c4dd273794f691844fe40077c8fa3134da0d76d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\libapshare.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bcec6acb462b9fb31a0c106ee01e1d7397175a8f">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\libapshare_b61e32982e30c09c9a492889e6c6fa9be110b14a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\umeng-analytics-v6.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fdd44f5f08b85ab98fc728d3b6f89629f7e416de">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\umeng-analytics-v6.1.0_8f08e1234b63d42d601e092eed5a1deb3f982b4d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\vr\libsharing\build\intermediates\bundles\default\libs\umeng_social_api.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="29a544700d326e652dd7ddb1c8f0a8f03475df4c">
+        <dex dex="E:\vr\app\build\intermediates\transforms\dex\debug\folders\1000\8\umeng_social_api_3d69713d135c924cdf9138869b10f94fb5447514\classes.dex" />
+    </item>
+
+</items>

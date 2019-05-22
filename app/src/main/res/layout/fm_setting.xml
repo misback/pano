@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            style="@style/SettingGroupTheme"
+            android:text="@string/account_bind" />
+        <!--绑定facebook账号-->
+        <RelativeLayout
+            android:id="@+id/rl_facebook"
+            style="@style/SettingItemTheme">
+
+            <TextView
+                android:text="@string/facebook_account_bind"
+                style="@style/SettingItemTitleTheme"/>
+
+            <TextView
+                android:id="@+id/tv_fb_user_name"
+                android:text="@string/unbind"
+                style="@style/SettingItemTitleTheme.RightTheme.TextArrow"/>
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/SettingGroupTheme"
+            android:text="@string/shoot_setting" />
+
+        <RelativeLayout
+            android:id="@+id/rl_record_time_limit"
+            style="@style/SettingItemTheme">
+            <!--拍摄设置-->
+            <TextView
+                android:text="@string/record_time_limit"
+                style="@style/SettingItemTitleTheme"/>
+
+            <!--android:theme="@style/SwitchTheme"-->
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/sc_record_time_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:clickable="false"
+                android:checked="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:theme="@style/SwitchTheme"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/divider_horizontal_marginleft"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_shutter_sound"
+            style="@style/SettingItemTheme">
+            <!--快门声音-->
+            <TextView
+                android:text="@string/shutter_sound"
+                style="@style/SettingItemTitleTheme"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/sc_shutter_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:checked="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:theme="@style/SwitchTheme"/>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/SettingGroupTheme"
+            android:text="@string/app_setting" />
+        <!--切换语言-->
+        <RelativeLayout
+            android:id="@+id/rl_language"
+            style="@style/SettingItemTheme">
+            <TextView
+                android:text="@string/language"
+                style="@style/SettingItemTitleTheme"/>
+            <TextView
+                android:id="@+id/tv_language"
+                android:text="@string/chinese"
+                style="@style/SettingItemTitleTheme.RightTheme.TextArrow"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/divider_horizontal_marginleft"/>
+
+        <!--底部选择logo-->
+        <RelativeLayout
+            android:id="@+id/rl_logo"
+            style="@style/SettingItemTheme">
+            <TextView
+                android:text="@string/watermark"
+                style="@style/SettingItemTitleTheme"/>
+
+            <TextView
+                style="@style/SettingItemTitleTheme.RightTheme.TextArrow"/>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/divider_horizontal_marginleft"/>
+
+        <!--清除缓存-->
+        <RelativeLayout
+            android:id="@+id/rl_clear_cache"
+            style="@style/SettingItemTheme">
+            <TextView
+                android:text="@string/clear_cache"
+                style="@style/SettingItemTitleTheme"/>
+
+            <TextView
+                android:id="@+id/tv_cache"
+                style="@style/SettingItemTitleTheme.RightTheme.TextArrow"/>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/divider_horizontal"/>
+
+        <TextView
+            style="@style/SettingGroupTheme"
+            android:text="@string/other" />
+        <!--固件本号-->
+        <RelativeLayout
+            style="@style/SettingItemTheme">
+            <TextView
+                android:text="@string/firmware_version"
+                style="@style/SettingItemTitleTheme"/>
+
+            <TextView
+                android:id="@+id/tv_firmware_version"
+                style="@style/SettingItemTitleTheme.RightTheme"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/divider_horizontal_marginleft"/>
+
+        <!--App版本号-->
+        <RelativeLayout
+            android:id="@+id/rl_check_update"
+            style="@style/SettingItemTheme">
+            <TextView
+                android:text="@string/app_version"
+                style="@style/SettingItemTitleTheme"/>
+            <TextView
+                android:id="@+id/tv_app_version"
+                style="@style/SettingItemTitleTheme.RightTheme.TextArrow"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/divider_horizontal"/>
+    </LinearLayout>
+</ScrollView>

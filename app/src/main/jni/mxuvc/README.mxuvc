@@ -1,0 +1,17 @@
+Compiling mxuvc for Android
+
+Building libmxuvc.so
+$ cd <path to android build top folder>
+$ mmm ./<path to mxuvc>
+example:  $ mmm ./home/user/mxuvc
+
+Building simple-capture app
+$ cd <path to android build top folder>
+$ mmm ./<path to mxuvc>/examples/skype/simple-capture
+
+
+libmxuvc.so is located under,
+$BUILD_SHARED_LIBRARY/system/lib
+
+Application binary will be located under 
+$BUILD_SHARED_LIBRARY/system/bin

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingLeft="@dimen/dp_14">
+    <!--android:src="@drawable/ic_filter_original"
+    app:siBorderWidth="@dimen/dp_2"
+    app:siBorderColor="@color/com_bg_transparent"-->
+    <com.lwm.shapeimageview.CircularImageView
+        android:id="@+id/riv_logo"
+        android:layout_width="@dimen/dp_62"
+        android:layout_height="@dimen/dp_62"
+        android:layout_gravity="center_vertical"
+        app:siBorderWidth="@dimen/dp_2"
+        app:siBorderColor="@color/C_B0_B0_B0"
+        app:siRadius="@dimen/dp_4"
+        app:siSquare="true"/>
+</FrameLayout>

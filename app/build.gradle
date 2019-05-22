@@ -1,0 +1,134 @@
+apply plugin: 'com.android.application'
+def releaseTime(){
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+    //return new Date().format("yyyyMMdd_HH_mm_ss", TimeZone.getTimeZone("UTC"))
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.uni.pano"
+        minSdkVersion 21
+        targetSdkVersion 22
+        versionCode 14
+        versionName "1.1.4"
+        sourceSets.main.jni.srcDirs = []
+        sourceSets.main.jniLibs.srcDirs = ['src/main/libs']
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为ES_SW_AndroidAPP_2.0.2008_20160612_R.apk
+                        def fileName = "UniPano_v${defaultConfig.versionName}_${releaseTime()}_B.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../doc/unipano.jks")
+            storePassword "unipano2017"
+            keyAlias "unipano"
+            keyPassword "unipano2017"
+            v2SigningEnabled true
+
+        }
+
+        Release {
+            storeFile file("../doc/unipano.jks")
+            storePassword "unipano2017"
+            keyAlias "unipano"
+            keyPassword "unipano2017"
+            v2SigningEnabled true
+        }
+    }
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+
+    repositories {
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+
+        mavenCentral()
+    }
+}
+
+task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
+    def ndkDir = android.ndkDirectory
+    commandLine "$ndkDir/ndk-build.cmd",
+            '-C', file('src/main/jni').absolutePath, // Change src/main/jni the relative path to your jni source
+            '-j', Runtime.runtime.availableProcessors(),
+            'all',
+            'NDK_DEBUG=0',
+            'V=1'
+}
+task cleanNative(type: Exec, description: 'Clean JNI object files') {
+    def ndkDir = android.ndkDirectory
+    //  if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+    commandLine "$ndkDir/ndk-build.cmd",
+            '-C', file('src/main/jni').absolutePath,
+            'clean'
+}
+
+clean.dependsOn 'cleanNative'
+task nativeLibsToJar(type: Zip, description: 'create a jar archive of the native libs') {
+    destinationDir file("$projectDir/src/main/java/libs")
+    // baseName 'native-libs'
+    extension 'jar'
+    from fileTree(dir: "$projectDir/src/main/java/libs", include: '**/*.so')
+    into 'lib/'
+}
+
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn(buildNative)
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
+    compile 'com.yanzhenjie:permission:1.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    //compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile project(':libsharing')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.qiniu:qiniu-android-sdk:7.3.+'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.adobe.xmp:xmpcore:6.1.10'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile project(':shapeImageView')
+    compile project(':crop')
+    compile project(':injector')
+}

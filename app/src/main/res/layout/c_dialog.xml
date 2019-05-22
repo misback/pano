@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:padding="@dimen/dp_20">
+
+    <!-- 对话框可见部分的背景 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/c_dialog_bg">
+
+        <!-- 内容layout -->
+        <LinearLayout
+            android:id="@+id/msg_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_22"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_22">
+
+            <!-- 内容 -->
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="16"
+                android:text="内容..."
+                android:textColor="@color/com_text_dlg_content"
+                android:textSize="@dimen/sp_14" />
+
+            <!-- 内容 下面默认的一行小灰字，默认不显示-->
+            <TextView
+                android:id="@+id/content_ex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:maxLines="10"
+                android:text="tips..."
+                android:textColor="@color/com_text_dlg_content_tips"
+                android:textSize="@dimen/sp_14" />
+
+            <!-- 输入框 -->
+            <EditText
+                android:id="@+id/content_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_6"
+                android:background="@drawable/c_dialog_edit_bg"
+                android:hint="请输入..."
+                android:maxLines="10"
+                android:padding="@dimen/dp_2"
+                android:textColor="@color/com_text_dlg_edit"
+                android:textColorHint="@color/com_text_dlg_edit_hint"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+        <!-- 内容下面的分界线 -->
+        <ImageView
+            android:id="@+id/msg_splite"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/msg_layout"
+            android:background="@color/com_bg_divider_gray_light" />
+
+        <!-- 按钮 -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/msg_splite"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- 左按钮 -->
+            <!--暂时不用背景，会盖住圆角-->
+            <!--android:background="@drawable/com_dlg_btn_selector"-->
+            <TextView
+                android:id="@+id/left_btn"
+                style="@style/c_dialog_btn"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textColor="@color/com_text_blue" />
+
+            <!-- 分界线 -->
+            <ImageView
+                android:id="@+id/btn_split"
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:background="@color/com_bg_divider_gray_light" />
+
+            <!-- 右按钮 -->
+            <!--暂时不用背景，会盖住圆角-->
+            <!--android:background="@drawable/com_dlg_btn_selector"-->
+            <TextView
+                android:id="@+id/right_btn"
+                style="@style/c_dialog_btn"
+                android:layout_weight="1"
+                android:text="@string/confirm"
+                android:textColor="@color/com_text_blue" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

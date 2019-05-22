@@ -1,0 +1,288 @@
+{
+    "system": {
+        "Dates"  : "20151015.1744",
+        "@Cam"   : "cs6022_vivint",
+        "@Vin"   : "1080p30",  
+        "@Vout"  : "1080p30 avc x1 + 1080p15 x1 avc + 720p30 x1 avc + yuv",
+
+        "BOOTMODE": "usb",
+        "BOARD": "mobileyes5",
+        "CAMERA_MODE": "IPCAM",
+        "MAINAPP": "app_json",
+        "DAC": "ti3100",
+        "ADC": "onchip",
+        "AUDIO_MCLK": "audgenclk",
+        "AIN0": "slave",
+        "AIN1": "master",
+        "I2S_CLKSRC": "condor",
+        "MIC_GAIN": "45",
+        "SPK_GAIN": "40",
+        "MIC_SAMPLERATE": "16000",
+        "SPKR_STATE": "on",
+        "NO_OF_MIC": "1",
+        "LENS":"ip91h",
+        "AUDIO_ENABLE": "0",
+        "MAXRES_INPUT": "1080p30"
+    },
+    "codec" : {
+        "isp0": {
+            "type": "isp",
+            "params" : {
+                "Q_ISP_CMP_AUTOEXP_ALG" : 2,
+                "Q_ISP_CMP_AE_EV_TARGET" : 88,
+                "Q_ISP_CMP_SENSOR_MAX_GAIN" : 48,
+                "Q_ISP_CMP_SENSOR_MAX_GAIN_FULL_FRAME_RATE" : 16,
+                "Q_ISP_CMP_IRIDIX_MIN_STRENGTH" : 4,
+                "Q_ISP_CMP_IRIDIX_MAX_STRENGTH" : 60,
+                "Q_ISP_CMP_TARGET_SATURATION_STRENGTH" : 100
+            }
+        },
+        "vcap0": {
+            "type": "vcap",
+            "cropWidth": 0,
+            "cropHeight": 0,
+            "stcPerOutputFrame": 3000, 
+            "params" : {
+                "Q_VCAP_CMP_VARIABLE_FRAME_RATE": 1,
+                "Q_VCAP_CMP_AV_SYNCH_ENABLE": 0,
+                "Q_VCAP_CMP_STC_PER_FRAME": 3000,
+                "Q_VCAP_CMP_HW_BYPASS_TFILTY": 1,
+                "Q_VCAP_CMP_HW_BYPASS_TFILTC": 1,
+                "Q_VCAP_CMP_HW_BYPASS_MOT_VFILT": 1,
+                "Q_VCAP_CMP_TF_ATTENUATION_Y0": 7,
+                "Q_VCAP_CMP_TF_ATTENUATION_Y1": 7,
+                "Q_VCAP_CMP_TF_ATTENUATION_C0": 7,
+                "Q_VCAP_CMP_TF_ATTENUATION_C1": 7
+            }
+        },
+        "dewarp0": {
+            "type": "dewarp",
+            "parent": "vcap0",
+            "outWidth": 1920,
+            "outHeight": 1080,
+            "maxNumMaps": 100,
+            "numOutputFrames": 4,
+            "minMapN": 128,
+            "dewarpedFrameWidth": 3072,
+            "dewarpedFrameHeight": 1728,
+            "ePTZMode": "WM_ZCLSTRETCH",
+            "params" : {
+                "Q_DEWARP_CMP_SET_LENS_MILI_FOV": 123600,
+                "Q_DEWARP_CMP_SET_LENS_MILI_RADIUS": 1050000,  
+                "Q_DEWARP_CMP_SET_LENS_MILI_HSHIFT": 0,
+                "Q_DEWARP_CMP_SET_LENS_MILI_VSHIFT": 0
+            }
+        },
+        "dewarp1": {
+            "type": "dewarp",
+            "parent": "vcap0",
+            "outWidth": 1920,
+            "outHeight": 1080,
+            "maxNumMaps": 100,
+            "numOutputFrames": 4,
+            "minMapN": 128,
+            "dewarpedFrameWidth": 3072,
+            "dewarpedFrameHeight": 1728,
+            "ePTZMode": "WM_ZCLSTRETCH",
+            "params" : {
+                "Q_DEWARP_CMP_SET_LENS_MILI_FOV": 123600,
+                "Q_DEWARP_CMP_SET_LENS_MILI_RADIUS": 1050000,  
+                "Q_DEWARP_CMP_SET_LENS_MILI_HSHIFT": 0,
+                "Q_DEWARP_CMP_SET_LENS_MILI_VSHIFT": 0
+            }
+        },
+        "nvpp123": {
+            "type": "nvpp",
+            "parent": "dewarp0",
+            "maxWidth": 1920,
+            "maxHeight": 1080,
+            "cropWidth": 0,
+            "cropHeight": 0,
+            "cropOffsetX": 0,
+            "cropOffsetY": 0,
+            "outWidth": 1920,
+            "outHeight": 1080,
+            "stcPerOutputFrame": 3000,
+            "numOutputFrames":4,
+            "avcPreproc" : 1,
+            "params" : {
+                "Q_NVPP_CMP_VID_PASSTHROUGH": 1,
+                "Q_NVPP_CMP_VARIABLE_FRAME_RATE": 1,
+                "Q_NVPP_CMP_SCALE_MB_ALIGN": 0,
+                "Q_NVPP_CMP_INITIAL_DELAY": 1
+             }
+        },
+        "ov0": {
+            "type": "ov",
+            "parent": "nvpp123",
+            "bypass": 0,
+            "privacy": 0
+        },
+        "nvpp1": {
+            "type": "nvpp",
+            "parent": "ov0",
+            "maxWidth": 1920,
+            "maxHeight": 1080,
+            "cropWidth": 0,
+            "cropHeight": 0,
+            "cropOffsetX": 0,
+            "cropOffsetY": 0,
+            "outWidth": 1920,
+            "outHeight": 1080,
+            "stcPerOutputFrame": 3000,
+            "numOutputFrames":4,
+            "avcPreproc" : 0,
+            "params" : {
+                "Q_NVPP_CMP_VID_PASSTHROUGH": 1,
+                "Q_NVPP_CMP_VARIABLE_FRAME_RATE": 1,
+                "Q_NVPP_CMP_SCALE_MB_ALIGN": 0,
+                "Q_NVPP_CMP_INITIAL_DELAY": 1
+             }
+        },
+        "nvpp2": {
+            "type": "nvpp",
+            "parent": "ov0",
+            "maxWidth": 1920,
+            "maxHeight": 1080,
+            "cropWidth": 0,
+            "cropHeight": 0,
+            "cropOffsetX": 0,
+            "cropOffsetY": 0,
+            "outWidth": 1920,
+            "outHeight":1080,
+            "stcPerOutputFrame": 6000,
+            "numOutputFrames":4,
+            "avcPreproc" : 0,
+            "params" : {
+                "Q_NVPP_CMP_VID_PASSTHROUGH": 1,
+                "Q_NVPP_CMP_VARIABLE_FRAME_RATE": 1,
+                "Q_NVPP_CMP_INITIAL_DELAY": 1
+             }
+        },
+        "nvpp3": {
+            "type": "nvpp",
+            "parent": "ov0",
+            "maxWidth": 1280,
+            "maxHeight": 720,
+            "cropWidth": 0,
+            "cropHeight": 0,
+            "cropOffsetX": 0,
+            "cropOffsetY": 0,
+            "outWidth": 1280,
+            "outHeight": 720,
+            "stcPerOutputFrame": 6000,
+            "numOutputFrames":4,
+            "avcPreproc" : 0,
+            "params" : {
+                "Q_NVPP_CMP_VID_PASSTHROUGH": 0,
+                "Q_NVPP_CMP_VARIABLE_FRAME_RATE": 1,
+                "Q_NVPP_CMP_INITIAL_DELAY": 1
+             }
+        },
+        "nvpp4": {
+            "type": "nvpp",
+            "parent": "dewarp1",
+            "maxWidth":1920,
+            "maxHeight":1080,
+            "cropWidth": 0,
+            "cropHeight": 0,
+            "cropOffsetX": 0,
+            "cropOffsetY": 0,
+            "outWidth":  320,
+            "outHeight": 240,
+            "stcPerOutputFrame":30000,
+            "numOutputFrames":4,
+            "avcPreproc" : 0,
+            "params" : {
+                "Q_NVPP_CMP_VARIABLE_FRAME_RATE": 1,
+                "Q_NVPP_CMP_INITIAL_DELAY": 1
+             }
+        },
+        "avcenc0": {
+            "type": "avcenc",
+            "parent": "nvpp1",
+            "channel": "CH1",
+            "streamId": 0,
+            "maxWidth": 1920,
+            "maxHeight": 1080,
+            "outputBufferSize": 12500000,
+            "profile": "baseline",
+            "level": 31,
+            "gopSize": 15,
+            "yrateControl": "BASIC_VBR",
+            "bitRate": 2000000,
+            "minBitRate": 1000000,
+            "perfLevel": 4,
+            "videoEncParams": {
+                "Q_AVCENC_CMP_VPP_REGION_STAT_ENABLE": 0
+             },
+            "videoEncRateControlParams": {
+                "Q_AVCENC_RC_CMP_MAX_IPFRAME_SIZE_RATIO": 180
+            }
+        },
+        "avcenc1": {
+            "type": "avcenc",
+            "parent": "nvpp2",
+            "channel": "CH2",
+            "streamId": 1,
+            "maxWidth": 1920,
+            "maxHeight": 1080,
+            "outputBufferSize": 12500000,
+            "profile": "baseline",
+            "level": 41,
+            "gopsize": 15,
+            "bitrate": 2000000,
+            "perfLevel": 4,
+            "videoEncParams": {
+                "Q_AVCENC_CMP_VPP_REGION_STAT_ENABLE": 0
+             },
+            "videoEncRateControlParams": {
+                "Q_AVCENC_RC_CMP_MAX_IPFRAME_SIZE_RATIO": 180
+            }
+        },
+        "avcenc2": {
+            "type": "avcenc",
+            "parent": "nvpp3",
+            "channel": "CH3",
+            "streamId": 2,
+            "maxWidth": 1280,
+            "maxHeight": 720,
+            "outputBufferSize": 12500000,
+            "profile": "baseline",
+            "level": 41,
+            "gopsize": 15,
+            "bitrate": 2000000,
+            "perfLevel": 4,
+            "videoEncParams": {
+                "Q_AVCENC_CMP_VPP_REGION_STAT_ENABLE": 0
+             },
+            "videoEncRateControlParams": {
+                "Q_AVCENC_RC_CMP_MAX_IPFRAME_SIZE_RATIO": 180
+            }
+        },
+        "raw0": {
+            "type": "raw",
+            "parent": "nvpp4",
+            "channel": "CH4",
+            "streamId": 3,
+            "captureFormat": "GREY",
+            "outAnalytics": 1
+        },
+        "audfil0": {
+            "type": "audfil",
+            "asp": {
+                 "type": "aspfil",
+                 "asp": 1,
+                 "agc": 0,
+                 "aec": 0,
+                 "nr" : 0,
+                 "fsa": 0,
+                 "ns_level": 20,
+                 "out_num_ch": 2
+             },
+             "params" : {
+                 "Q_AUDFLTR_CMP_ASP_AEC_TYPE": 1
+             }
+       }
+    }
+}

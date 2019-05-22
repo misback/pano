@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+ * UVCCamera
+ * library and sample to access to UVC web camera on non-rooted Android device
+ * 
+ * Copyright (c) 2014-2015 saki t_saki@serenegiant.com
+ * 
+ * File name: colors.xml
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ * 
+ * All files in the folder are under this Apache License, Version 2.0.
+ * Files in the jni/libjpeg, jni/libusb, jin/libuvc, jni/rapidjson folder may have a different license, see the respective files.
+*/
+-->
+<resources>
+
+    <!-- Web colors -->
+    <color name="TRANSPARENT">#00000000</color>
+    <color name="GRAY">#ff808080</color>
+    <color name="DARKGRAY">#ffa9a9a9</color>
+    <color name="GAINSBORO">#ffdcdcdc</color>
+    <color name="YELLOW">#ffffff00</color>
+    <color name="WHITE">#ffffffff</color>
+
+    <!--<color name="BOXCOLOR">37bbe9</color>-->
+
+    <color name="RGB_333333">#333333</color>
+    <color name="RGB_444444">#444444</color>
+    <color name="RGB_E2E2E2">#E2E2E2</color>
+    <color name="RGB_F2F2F2">#F2F2F2</color>
+    <!-- 正文内容 -->
+    <color name="text_content">#7D7D7D</color>
+    <!-- 标题 -->
+    <color name="text_title">@color/com_bg_bright_black</color>
+    <!-- 子内容 -->
+    <color name="text_hint">#B4B4B4</color>
+    <!--全局分割线-->
+    <drawable name="divider">#D8D8D8</drawable>
+    <color name="transparent_percent_60">#992e2e2e</color>
+    <!--Activity背景色-->
+    <drawable name="bg_activity">#F1F1F1</drawable>
+    <!--对话框-->
+    <color name="dialog_title_text">@color/RGB_333333</color>
+    <color name="dialog_message_text">#353535</color>
+    <color name="dialog_button_text">#007AFF</color>
+    <color name="dialog_button_text2">#ff5522</color>
+
+
+    <drawable name="bg_filter">@color/com_bg_light_gray</drawable>
+
+
+    <!-- 通用 -->
+    <color name="com_bg_transparent">#00000000</color>  <!-- 透明颜色 -->
+    <color name="com_bg_black">#2e2e2e</color> <!-- 黑色背景 -->
+    <color name="com_bg_mask_black">#66000000</color> <!-- 半透黑色背景 -->
+    <color name="com_bg_mask_blue">#6637bbe9</color> <!-- 半透黑色背景 -->
+    <color name="com_bg_gray">#f0f0f0</color>  <!-- 灰色背景 -->
+    <!-- 蒙层（还没有定） -->
+    <color name="com_bg_light_gray">#3a3a3a</color>
+    <color name="com_bg_bright_blue">#37bbe9</color>
+    <color name="com_bg_bright_black">#3f3f3f</color>
+
+    <!-- 灰色分界线，深一点 -->
+    <color name="com_bg_divider_gray_light">#dfdfdf</color> <!-- 灰色分界线，浅一点 -->
+    <color name="com_bg_dlg">#f8f8f8</color> <!-- 对话框，背景 -->
+
+    <!-- ===================================== 文字颜色 ===================================== -->
+    <color name="com_text_white">#ffffff</color> <!-- 白色字 -->
+    <!-- 黑色字 -->
+    <!-- 灰色字 -->
+    <color name="com_text_blue">#22ade6</color>  <!-- 蓝色字 -->
+    <color name="com_text_dlg_content">#000000</color> <!-- 对话框，内容 -->
+    <color name="com_text_dlg_content_tips">#5e5e5e</color> <!-- 对话框，内容的提示 -->
+    <!-- 对话框，按钮 -->
+    <color name="com_text_dlg_edit">#5e5e5e</color> <!-- 对话框，编辑框 -->
+    <color name="com_text_dlg_edit_hint">#c9c9c9</color> <!-- 对话框，编辑框hint -->
+
+    <!-- ===================================== 新主题 ===================================== -->
+    <!-- background color -->
+    <color name="new_com_bg_color_black">#2e2e2e</color>
+
+    <!-- ===================================== 分享 ===================================== -->
+    <!-- text color -->
+    <color name="share_text_color">#ffa5a5a5</color>
+    <color name="plaza_navi_text_color">#ffa7a7a7</color>
+    <color name="plaza_navi_select_text_color">#ff1daee6</color>
+    
+    
+    <color name="C_D8_D8_D8">#D8D8D8</color>
+    <color name="C_FF_FF_FF">#ffffff</color>
+    <color name="C_F0_F0_F0">#F0F0F0</color>
+    <color name="C_9B_9B_9B">#9B9B9B</color>
+    <color name="C_64_5E_66">#645E66</color>
+    <color name="C_FF_00_00_00">#FF000000</color>
+    <color name="C_FF_FF_FF_FF">#FFFFFFFF</color>
+    <color name="C_DF_DF_DF">#dfdfdf</color>
+    <color name="C_F2_F2_F2">#F2F2F2</color>
+    <color name="C_F5_F5_F5">#F5F5F5</color>
+    <color name="C_FF_74_3A">#FF743A</color>
+    <color name="C_00_00_00">#000000</color>
+    <color name="C_FF_67_1B">#FF671B</color>
+    <color name="C_60_FF_67_1B">#60FF671B</color>
+    <color name="C_00_00_00_00">#00000000</color>
+    <color name="C_B0_B0_B0">#B0B0B0</color>
+    <color name="C_66_00_00_00">#66000000</color>
+    <color name="C_40_00_00_00">#40000000</color>
+    <color name="C_81_81_81">#818181</color>
+    <color name="C_E2_E2_E2">#E2E2E2</color>
+    <color name="C_FF_FF_67_1B">#FFFF671B</color>
+    <color name="C_FA_FB_FC">#FAFBFC</color>
+    <color name="C_6C_6C_6C">#6C6C6C</color>
+    <color name="C_4D_4D_4D">#4D4D4D</color>
+    <color name="C_4E_4E_4E">#4E4E4E</color>
+    <color name="C_60_4E_4E_4E">#604E4E4E</color>
+    <color name="C_1F_1F_1F">#1F1F1F</color>
+    <color name="C_FF_DB_DC_DE">#FFDBDCDE</color>
+    <color name="C_D8_0E_4F">#D80E4F</color>
+    <color name="C_BE_BE_BE">#BEBEBE</color>
+</resources>

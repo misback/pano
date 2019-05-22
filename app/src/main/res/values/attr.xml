@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="textSize" format="dimension" />
+    <attr name="textColor" format="color" />
+    <attr name="text" format="string" />
+
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="borderType" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CTextView">
+        <attr name="frameStrokeWidth" format="dimension" />
+        <attr name="frameColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ImageTextView">
+        <attr name="disableResId" format="integer" />
+        <attr name="ableResId" format="integer" />
+        <attr name="disableColor" format="color" />
+        <attr name="ableColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressImageView">
+        <attr name="text_color" format="color" />
+        <attr name="text_size" format="dimension" />
+    </declare-styleable>
+
+</resources>

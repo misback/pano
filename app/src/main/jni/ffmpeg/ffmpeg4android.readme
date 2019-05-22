@@ -1,0 +1,188 @@
+===========================================================================
+FFmpeg for Android
+http://sourceforge.net/projects/ffmpeg4android/
+Srdjan Obucina <obucinac@gmail.com>
+===========================================================================
+
+
+
+===========================================================================
+Introduction
+===========================================================================
+
+FFmpeg for Android is a set of Android makefiles which enable configuration
+and building FFmpeg library under Android source code tree with Android
+NDK.
+
+While working as a system integrator, I have come upon more than few
+Android ports of FFmpeg library. All of them have some non-features in
+common:
+
+- It is not possible to use configure script to configure the library. This
+  may lead to invalid library configuration and output and degraded
+  performance or feature set.
+- Some FFmpeg libraries are missing. Usually, only libavutil, libavcodec
+  and libavformat are built.
+- FFmpeg tools (ffmpeg, ffplay, ffprobe, ffserver) are missing.
+- Manually added files into Android.mk, usually without proper
+  understanding of dependencies between files and function of each file
+  in a library.
+- Configuration is locked to single architecture.
+- The library can not be built in parallel for different target products
+  and architectures. This is important for large test environments.
+- Missing or incomplete compiler and linker flags.
+- Building library in a "It compiles = It is working" manner.
+- Building library as a large single file.
+
+This project is my attempt to address these and many other issues and
+create makefiles for building FFmpeg library under Android source code tree
+which will create output as close as possible to the output of "regular"
+building process using standalone toolchain. These makefiles are result of
+combining and extending various makefiles I have found on the web and
+during my work.
+
+
+
+Makefiles are tested and are working fine on:
+
+Build host OS:      Ubuntu 12.04
+Android target OS:  Android Master branch
+Architecture:       arm, mips, x86
+SDK + NDK release:  highest available, selected during building
+Product:            aosp_arm-eng, aosp_mips-eng, aosp_x86-eng
+FFmpeg releases:    Latest releases from 0.7, 2.0 and HEAD branches
+
+
+
+===========================================================================
+Features
+===========================================================================
+
+- On-the-fly library configuration. FFmpeg will be configured on-the-fly,
+  during Android building process, in accordance to the selected product,
+  cpu architecture, cpu architecture variant, and fine tuning cpu
+  parameters.
+- Configuration driven building. No need to manually add filenames to the
+  makefiles, or hack through the library in order to get the build you
+  want.
+- Per product configuration. Every TARGET_PRODUCT will have its own
+  configuration.
+- Builds all libraries and tools, except ffplay.
+- Builds both shared and static libraries.
+- Builds latest releases from 0.7, 2.0 and HEAD branches.
+- Supports parallel building from the same source for the different
+  products.
+
+
+
+===========================================================================
+Known issues
+===========================================================================
+
+- For a very long time now, I was not able to make a release which can
+  build for all three major architectures - arm, mips and x86.
+  Sometimes problem was compiler, and sometimes problems were assembler
+  instructions. For the sake of making update to recent FFmpeg version,
+  I released makefiles which are not able to build all version to all
+  platforms.
+  With this release, you can build only:
+    For ARM: HEAD, 2.1.4, 0.7.16
+    For MIPS: 0.7.16
+    For X86: None
+
+
+
+===========================================================================
+Note
+===========================================================================
+
+Due to the overwhelming load on my build testing equipment, I have
+dramatically reduced supported versions, platforms and Android OS
+versions. From now on, the supported branches will be 0.7 as the last
+0.6 ABI compatible, latest official release and HEAD.
+
+
+
+===========================================================================
+Usage
+===========================================================================
+
+Extract ffmpeg-<version>.android.tar.gz into Android source code tree, at
+location:
+
+<android-src-root-dir>/external
+
+Files will be located in:
+
+<android-src-root-dir>/external/ffmpeg-<version>.android
+
+Edit Android_configuration.mk and apply your customizations to the
+./configure parameters, if needed.
+
+Initialize Android build environment:
+
+cd <android-src-root-dir>
+. build/envsetup.sh
+lunch <product>
+
+To configure and build the library, run
+
+make
+
+or
+
+cd external/ffmpeg-<version>.android; mm;
+
+If there is no existing library configuration for a selected product, the
+library will be configured on the fly, during building process, with
+parameters provided in Android_configuration.mk. Whenever you change
+configuration parameters, the library will be reconfigured.
+
+Compiled FFmpeg libraries and tools will have version suffix, eg
+libavcodec-2.0.a, libavutil-2.0.so, ffprobe-2.0
+
+
+
+===========================================================================
+Support
+===========================================================================
+
+Since Android is changing daily, and releases are tested only on a release
+day, it is possible that after some time you will have issues with
+building FFmpeg for Android.
+
+Feel free to post on discussion board:
+https://sourceforge.net/p/ffmpeg4android/discussion/
+
+Feel free to report issues:
+https://sourceforge.net/p/ffmpeg4android/tickets/
+
+I will try to respond in a timely manner.
+
+
+
+===========================================================================
+Plan
+===========================================================================
+
+Short term plan is to test and update scripts to work on more architectures
+and platforms.
+
+Long term plan is to continue to provide scripts for latest FFmpeg library
+releases, as they appear.
+
+The Ultimate plan is to try to make scripts part of official FFmpeg
+library, once they are stable and robust enough.
+
+
+
+===========================================================================
+License:
+===========================================================================
+
+Please, note that FFmpeg library and FFmpeg for Android makefiles for
+building it under Android source code tree are two different projects.
+FFmpeg for Android makefiles are licensed under whatever license You are
+using FFmpeg.
+
+

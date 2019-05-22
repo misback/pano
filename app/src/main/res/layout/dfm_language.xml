@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_F5_F5_F5"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_top_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/C_FF_FF_FF">
+        <include
+            layout="@layout/divider_horizontal"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_english"
+            style="@style/SettingItemTheme">
+
+            <TextView
+                android:text="@string/english"
+                style="@style/SettingItemTitleTheme"/>
+
+            <TextView
+                android:id="@+id/tv_english_check"
+                style="@style/SettingItemTitleTheme.RightTheme.Checked"/>
+        </RelativeLayout>
+
+
+        <include layout="@layout/divider_horizontal_marginleft"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_chinese"
+            style="@style/SettingItemTheme">
+            <TextView
+                android:text="@string/chinese"
+                style="@style/SettingItemTitleTheme"/>
+
+            <TextView
+                android:id="@+id/tv_chinese_check"
+                style="@style/SettingItemTitleTheme.RightTheme.Checked"/>
+        </RelativeLayout>
+        <include layout="@layout/divider_horizontal"/>
+    </LinearLayout>
+
+</LinearLayout>

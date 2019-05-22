@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_FF_FF_FF"
+    android:orientation="vertical">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/rv_album"-->
+            <!--android:scrollbars="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+        <!--</android.support.v7.widget.RecyclerView>-->
+
+        <com.uni.pano.widget.CRecyclerView
+            android:id="@+id/rv_album"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.uni.pano.widget.CRecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!--空数据显示-->
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/layout_empty_view"
+        android:visibility="gone"/>
+</LinearLayout>

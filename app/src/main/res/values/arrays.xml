@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unsupport">
+        <item>M5 Note</item>
+        <item>三星Galaxy Note III</item>
+        <item>m3 note</item>
+        <item>三星GALAXY S6</item>
+        <item>SM-G9280</item>
+        <item>SM-G9250</item>
+    </string-array>
+</resources>

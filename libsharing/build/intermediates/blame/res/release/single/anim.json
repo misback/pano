@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\umeng_socialize_fade_out.xml",
+        "source": "E:\\vr\\libsharing\\src\\main\\res\\anim\\umeng_socialize_fade_out.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\umeng_socialize_fade_in.xml",
+        "source": "E:\\vr\\libsharing\\src\\main\\res\\anim\\umeng_socialize_fade_in.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\umeng_socialize_slide_in_from_bottom.xml",
+        "source": "E:\\vr\\libsharing\\src\\main\\res\\anim\\umeng_socialize_slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\umeng_socialize_slide_out_from_bottom.xml",
+        "source": "E:\\vr\\libsharing\\src\\main\\res\\anim\\umeng_socialize_slide_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\umeng_socialize_shareboard_animation_out.xml",
+        "source": "E:\\vr\\libsharing\\src\\main\\res\\anim\\umeng_socialize_shareboard_animation_out.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\umeng_socialize_shareboard_animation_in.xml",
+        "source": "E:\\vr\\libsharing\\src\\main\\res\\anim\\umeng_socialize_shareboard_animation_in.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\vr\\libsharing\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\678a41c96b06ba95d158393bb0e856c979c024e1\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    }
+]

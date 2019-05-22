@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<usb>
+    <!-- all device of UVC -->
+    <usb-device
+        product-id="45069"
+        vendor-id="10750" />
+</usb>

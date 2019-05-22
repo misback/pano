@@ -1,0 +1,299 @@
+
+
+/**
+ * @mainpage
+ *
+ * <H2>1. INTRODUCTION</H2>
+ * MXUVC is a simple, user-friendly application interface to control and capture audio and multi-channel
+ * video from a GEO Camera over the USB on a host platform.<br><br>
+ * As shown in the Figure 1.1 below, GEO Cameras are connected to the Host system through the USB. GEO
+ * Cameras are USB Video Class (UVC) and USB Audio Class (UAC) compatible. The Video and Audio
+ * functionalities of the GEO Cameras can be accessed through the standard Linux V4L2 UVC Video
+ * Interface and the ALSA UAC Audio Interface.<br><br>
+ *
+ * @image html fig-1.1.png
+ *
+ * MXUVC can be broadly divided into 3 subsystems namely Video Subsystem, Audio Subsystem and Alert
+ * Subsystem. MXUVC provides an IP Camera application framework over the standard Linux V4l2 UVC
+ * Video and the ALSA UAC Audio interface forming the Video and the Audio subsystems. The Alert
+ * subsystem is a customized interface over the linux lib-usb layer implemented using vendor specific
+ * commands and a dedicated usb end-point. The lib-usb interface is also used to overlay customary text in
+ * the video. One use-case for the text overlay feature would be to superimpose the capture time in the
+ * video.<br><br>
+ *
+ * MXUVC at high level provides the below listed functionalities by which the user can develop IP Camera
+ * application on the host system using a GEO camera.<br><br>
+ * 1. Control and Capture Multi-Channel Video through Video Subsystem.<br>
+ * 2. Tuning the Sensor and Video parameters through the Video Subsystem.<br>
+ * 3. Control and Capture Audio through the Audio Subsystem.<br>
+ * 4. Configuring and receiving audio alert parameters through the Alert sub system.<br>
+ * 5. Overlaying customary text in the video, to enable features like overlaying capture-time etc. for
+ * predefined font.<br><br>
+ * MXUVC APIs for these sub systems are discussed in great detail in the subsequent chapters.<br><br>
+ *
+ * <H2>2 MXUVC VIDEO SUBSYSTEM</H2>
+ * MXUVC Video subsystem is used to initialize the GEO camera Video Interface, configuring the video and
+ * sensor parameters and start capturing the video data for further processing. MXUVC supports capture of
+ * multiple channels of video data of varying resolution and format. However the resolution and format
+ * supported by a channel is fixed for a product configuration.
+ *
+ * The data structures and the APIs are explained in @ref video_system. 
+ *
+ * <H3>2.1 Initializing Video Subsystem</H3>
+ *
+ * Initialization of video subsystem involves<br>
+ *
+ * @li Initializing the video interface. Refer @ref video_init_deinit.
+ * @li Configuring the video channels. Refer @ref mxuvc_video_get_channel_count & @ref mxuvc_video_get_channel_info
+ *
+ * <H3>2.2 Registering Callback Function</H3>
+ * Refer @ref video_register for more details.
+ *
+ * <H3>2.3 Video Capture</H3>
+ * Refer @ref video_start_stop for start & stop capturing video on the channels.
+ *
+ * <H3>2.4 Changing Video Channel Parameters </H3>
+ * Refer @ref video_control for more details.
+ *
+ * <H3>2.5 Changing Dewarp Parameters </H3>
+ * MXVUC also exposes one common API to change the dewarp parameters on the camera.
+ * The syntax and required data structures for the same are described in @ref dewarp_control.
+ *
+ * <H3>2.6 Changing Compositor Parameters </H3>
+ * MXVUC also exposes one common API to change the compositor parameters on the camera. One of the
+ * features required by video compositor is that mxuvc client should be able to select a particular
+ * panel to show in full view. Also it needs to control the panel parameters like output width,
+ * output height, x offset and y offset.
+ *
+ * @li API to specify width, height, x and y of a panel in a channel
+ * @li API to enable/disable a panel within a channel.
+ *
+ * So now if we want to show panel 0 in full view from a composited 2x2 showing panels 0-3, the API
+ * sequence will be:
+ * @li Disable panel 1
+ * @li Disable panel 2
+ * @li Disable panel 3
+ * @li Set width, height, x and y of panel 0 to full view
+ *
+ * Going back to 2x2 view will require following sequence:
+ * @li Set width, height, x and y of panel 0 to required values
+ * @li Enable panel 1
+ * @li Enable panel 2
+ * @li Enable panel 3
+ *
+ * From these API, we can actually change the panel view to any combination as long as the total
+ * number of panels does not exceed what is initially configured in JSON. For example, we can change
+ * to 1x2, 2x1 and any other non-symmetric combination.
+ *
+ * The syntax and required data structures for the same are described in @ref compositor_control.
+ *
+ * <H3>2.7 Changing Sensor/Image Parameters</H3>
+ * MXUVC also exposes API’s to set sensor/image parameters on the camera. Data structures and the APIs
+ * are described in @ref sensor_control.
+ *
+ * <H3>2.8 Freeing Resources</H3>
+ *
+ * Refer @ref video_init_deinit for more details.
+ *
+ * <H2>3 MXUVC AUDIO SUBSYSTEM</H2>
+ * The Audio Subsystem of mxuvc library is used to handle all the command and data interfaces of audio
+ * channels for the GEO camera. The user can use the Audio Subsystem to initialize, configure and capture
+ * the audio data coming from GEO camera.
+ * 
+ * Audio Capability of GEO camera
+ * @li 8000, 16000, 24000 capture sampling rates
+ * @li PCM and encoded data (in AAC or OPUS format) capture support
+ * @li Mono and Stereo capture support
+ *
+ * The data structures and the APIs are explained in the sections @ref audio_system.
+ *
+ * <H3>3.1 Initializing Audio Subsystem</H3>
+ *
+ * Refer @ref audio_init_deinit for more details.
+ *
+ * <H3>3.2 Registering Callback Function</H3>
+ *
+ * Refer @ref audio_register for more details.
+ *
+ * <H3>3.3 Audio Capture</H3>
+ *
+ * Refer @ref audio_start_stop for start & stop capturing audio on the channels.
+ *
+ * <H3>3.4 Changing Audio Parameters</H3>
+ *
+ * Refer @ref audio_control for more details.
+ *
+ * <H3>3.5 Freeing Resources</H3>
+ *
+ * Refer @ref audio_init_deinit for more details.
+ *
+ * <H2>4 MXUVC ALERT SUBSYSTEM</H2>
+ * MXUVC Alert subsystem is used to configure and receive alerts from the GEO Camera.
+ * 
+ * The data structures and the APIs are explained in the sections @ref alert_system.
+ *
+ * <H3>4.1 Initializing Alert Subsystem</H3>
+ *
+ * Refer @ref alert_init_deinit for more details.
+ *
+ * <H3>4.2 Registering Callback Function</H3>
+ *
+ * Refer @ref alert_register for more details.
+ *
+ * <H3>4.3 Changing Audio Alerts Parameters</H3>
+ *
+ * Refer @ref alert_control for interface functions related to audio alerts.
+ *
+ * <H3>4.4 Freeing Resources</H3>
+ *
+ * Refer @ref alert_init_deinit for more details.
+ *
+ * <H2>5 MXUVC OVERLAY SUBSYSTEM</H2>
+ * MXUVC Overlay Plug-in is used to overlay customary text real-time in the captured video. One of the
+ * use-case of the feature is to insert the current time information, during the video capture. The
+ * requirements of this interface are described below
+ * @li Language: The text supported for is English only
+ *
+ * @li Size: The size of the font supported could be 16x16, 32x32, or 8x8. 8x8 may not be suitable for
+ * HD resolution.
+ *
+ * @li Files: By default standard Font files are released for this feature. However the user would be able
+ * to use custom fonts.
+ *
+ * @li Download: The user should be allowed to download the font binary over the USB as a part of
+ * camera initialization. The Font binary is not stored in the firmware. However space is allocated
+ * for maximum allowable font size (32 x 32) in the firmware.
+ *
+ * @li Position: The user should be allowed to specify a position X and Y of the video at which he
+ * wants to overlay the text, where X and Y are constrained to below in the firmware.
+ *
+ * @li Number: The user should be allowed to specify up to 3 texts at a time at independent positions X
+ * and Y. However the length of each text is fixed to a maximum of 24 characters.
+ *
+ * @li Update: The user should be able to change the text which he needs to overlay on the video at a
+ * given point of time during capture.
+ *
+ * @li Time: When the user uses time feature<br>
+ * 1. The time should be displayed in 24Hr Format.<br>
+ * 2. The user should be able to set a start time every now and then. The firmware then
+ * automatically increments and displays the time from the specified start time. By default
+ * the firmware sets the start time as 00:00:00.
+ *
+ * The data structures and the APIs are explained in the sections @ref overlay_system.
+ *
+ * <H2>6 MXUVC CUSTOM-CONTROL PLUGIN</H2>
+ * MXUVC custom-control plugin is used to handle all the custom control (proprietary) commands that
+ * are required to support GEO camera specific functionalities like Acoustic Echo Canceller (AEC) etc.
+ *
+ * The data structures and the APIs are explained in the sections @ref custom_ctrl_system.
+ *
+ * <H2>7 COMPILING MXUVC</H2>
+ * Compiling mxuvc results in a static library, libmxuvc.a, and a shared library, libmxuvc.so.
+ * If only one application uses mxuvc API, it is simpler to directly linked in the static library.
+ * If more than one application uses the API then space and memory can be spared by using the
+ * shared library.
+ *
+ * To compile, go to mxuvc/directory and type:<b> make </b>
+ *
+ * Please make sure the environment variable GEOSW_ROOT set to the project directory compiling mxuvc package.
+ * Cross compiling mxuvc for a specific platform requires the Makefile to be modified to make it point to
+ * the toolchain compiler, libraries and header files.
+ *
+ * <H2>8 EXAMPLE CODE</H2>
+ * The directory <em>mxuvc/examples/capture-mux</em> contains various applications to demonstrate use
+ * of mxuvc API’s for the multi-channel video and audio application. The <em>mxuvc/examples/alert</em> directory
+ * contains applications to demonstrate the alert handling during capture.
+ *
+ * <H3>8.1 Video Capture</H3>
+ * <H4>8.1.1 Capture multi-channel video</H4>
+ * The example capture_mux.c demonstrates multi-channel video only capture.
+ * The programming flow of the application is as below.
+ * @li Initialize the video interface.
+ * @li Get the number of video channels supported by the camera.
+ * @li Register the call back function with the channel number as the user parameter
+ * to know from which the channel the video data is received.
+ * @li Gets and sets various channel parameters.
+ * @li Start the video capture on all the all the channels for a duration in secs specified by the first argument
+ * to the application, if not specified it is default to 15 secs.
+ * @li Sets various channel parameters on the fly.
+ * @li The video data received in the call back is written into different files specific to the channel based on
+ * the channel parameter received in the call-back.
+ * @li Stop the video capture on all the all the channels.
+ * @li Free the resources allocated.
+ *
+ * <H4>8.1.2 Capture multi-channel video and audio</H4>
+ * The example capture_avmux.c demonstrates multi-channel video and AAC audio capture.
+ * The programming flow of the application is as below.
+ * @li Initialize the audio interface.
+ * @li Set the Audio format and the sample rate.
+ * @li Register the audio call back function to receive audio data.
+ * @li Set the Audio Volume.
+ * @li Initialize the video interface.
+ * @li Get the number of video channels supported by the camera.
+ * @li Register the call back function with the channel number as the user parameter
+ * to know from which the channel the video data is received.
+ * @li Gets and sets various channel parameters.
+ * @li Start the audio capture and video capture on all the all the channels for a duration in secs specified by
+ * the first argument to the application, if not specified it is default to 15 secs.
+ * @li Sets various channel parameters on the fly.
+ * @li The multi-channel video and audio data received in the call back functions are written into different files.
+ * @li Stop the audio capture and video capture on all the all the channels.
+ * @li Free the resources allocated.
+ * 
+ * <H3>8.2 Alerts</H3>
+ * The example alerts.c demonstrates multi-channel video and AAC audio capture along with configuring
+ * and receiving audio alert statistics.
+ * The programming flow of the application is as below.
+ * @li Initialize the audio interface.
+ * @li Set the Audio format and the sample rate.
+ * @li Register the audio call back function to receive audio data.
+ * @li Set the Audio Volume.
+ * @li Initialize the video interface.
+ * @li Get the number of video channels supported by the camera.
+ * @li Register the call back function with the channel number as the user parameter to know from which
+ * the channel the video data is received.
+ * @li Gets and sets various channel parameters.
+ * @li Initialize the Alert Subsystem.
+ * @li Enable the audio alerts with the audio alert call-back function with specific audio threshold.
+ * @li Start the audio capture and video capture on all the all the channels for a duration in secs specified by
+ * the first argument to the application, if not specified it is default to 15 secs.
+ * @li Sets various channel parameters on the fly.
+ * @li Enable audio alerts and get the current audio intensity during capture.
+ * @li The multi-channel video and audio data received in the call back functions are written into different
+ * files.
+ * @li Print the Audio Alert statistics in the respective call-back functions.
+ * @li Stop the audio capture and video capture on all the all the channels.
+ * @li Free the resources allocated.
+ *
+ *
+ * <H2>Copyright and Trademark Information</H2>
+ * GEOSemi reserves the right to change its products or specifications without notice at any time. Copying,
+ * duplicating, selling, or otherwise distributing any part of this document without signing a non-disclosure
+ * agreement with an authorized representative of GEOSemi is prohibited. GEOSemi makes no warranty for
+ * the use of its products and bears no responsibility for any errors or omissions that may appear in this
+ * document.<br>
+ *
+ * The GEOSemi, GEO, GEO logo, eWARP, REALTA, and ePTZ are trademarks or registered trademarks
+ * of GEO Semiconductor Inc.
+ *
+ * Other product and company names mentioned herein are used for identification purposes only and may be
+ * trademarks of their respective companies.<br>
+ *
+ * All other products or service names used in this publication are for identification purposes only, and may
+ * be trademarks or registered trademarks of their respective companies. All other trademarks or registered
+ * trademarks mentioned herein are the property of their respective holders.<br><br>
+ *
+ * <H2>Contact Information</H2>
+ *
+ * <b>GEO Semiconductor Inc.</b><br>
+ * 101 Metro Drive, Suite 620<br>
+ * San Jose, CA 94110<br>
+ * United States<br>
+ * Phone: 408-638-0400<br><br>
+ * www.geosemi.com<br>
+ * support@geosemi.com<br><br>
+ *
+ * © 2014 GEO Semiconductor Inc.
+ *
+ */
+
